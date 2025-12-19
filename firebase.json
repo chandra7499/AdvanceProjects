@@ -1,6 +1,18 @@
 {
   "hosting": {
-    "public": "practices/dist",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "site": "tanzon-store-6cbb4",
+
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   }
 }
