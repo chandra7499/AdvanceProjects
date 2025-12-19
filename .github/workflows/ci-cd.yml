@@ -46,11 +46,10 @@ jobs:
         working-directory: practices
         run: npm install
 
-      - name: Build frontend
+      - name: Build frontend for Firebase
         working-directory: practices
         run: npm run build
 
-      # ---------- FIREBASE DEPLOY ----------
       - name: Deploy Frontend to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -58,3 +57,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TANZON_STORE }}
           projectId: tanzon-store
           channelId: live
+          entryPoint: practices
