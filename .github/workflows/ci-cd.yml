@@ -53,5 +53,5 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TANZON_STORE }}
-          projectId: tanzon-store-6cbb4
+          projectId: tanzon-store
           channelId: live
