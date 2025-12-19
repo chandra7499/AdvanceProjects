@@ -1,0 +1,149 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Apple iPhone 15 Pro",
+        "category": "Electronics",
+        "price": 999.99,
+        "image": "https://www.dxomark.com/wp-content/uploads/medias/post-155689/Apple-iPhone-15-Pro-Max_-blue-titanium_featured-image-packshot-review.jpg",
+        "stock": 50
+      },
+      {
+        "id": 2,
+        "name": "Samsung Galaxy S23 Ultra",
+        "category": "Electronics",
+        "price": 1199.99,
+        "image": "https://s1.cel.ro/images/mari/2023/02/03/Telefon-mobil-Samsung-Galaxy-S23-Ultra-Dual-SIM-8GB-256GB-Lavender.jpg",
+        "stock": 30
+      },
+      {
+        "id": 3,
+        "name": "Sony WH-1000XM5",
+        "category": "Electronics",
+        "price": 349.99,
+        "image": "https://m2.me-retail.com/cdn-cgi/image/w=1000,q=75,f=auto/pub/media/catalog/product/w/h/wh-1000xm5b-7.png",
+        "stock": 80
+      },
+      {
+        "id": 4,
+        "name": "Nike Air Max 270",
+        "category": "Footwear",
+        "price": 150.00,
+        "image": "https://i.redd.it/iw6g7cmeulgb1.jpg",
+        "stock": 100
+      },
+      {
+        "id": 5,
+        "name": "Adidas Ultraboost 22",
+        "category": "Footwear",
+        "price": 180.00,
+        "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/123717a32016417f9044ada9001b57e2_9366/ULTRABOOST_22_SHOES_Black_GX5591_01_standard.jpg",
+        "stock": 120
+      },
+      {
+        "id": 6,
+        "name": "Dell XPS 15",
+        "category": "Laptops",
+        "price": 1899.99,
+        "image": "https://m.media-amazon.com/images/I/71EbMDsXK+L.jpg",
+        "stock": 25
+      },
+      {
+        "id": 7,
+        "name": "MacBook Air M2",
+        "category": "Laptops",
+        "price": 1199.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMtTyC6jfo9mnjZZw0hY2a2EbNqrsOMZ9_zA&s",
+        "stock": 40
+      },
+      {
+        "id": 8,
+        "name": "Logitech MX Master 3S",
+        "category": "Accessories",
+        "price": 99.99,
+        "image": "https://m.media-amazon.com/images/I/61jFSvCTfpL.jpg",
+        "stock": 60
+      },
+      {
+        "id": 9,
+        "name": "Razer Huntsman Mini",
+        "category": "Accessories",
+        "price": 129.99,
+        "image": "https://m.media-amazon.com/images/I/61DP8L9ooYL.jpg",
+        "stock": 75
+      },
+      {
+        "id": 10,
+        "name": "Sony PlayStation 5",
+        "category": "Gaming",
+        "price": 499.99,
+        "image": "https://www.sathya.store/img/product/ojqypr02utVCzLA8.jpg",
+        "stock": 35
+      },
+      {
+        "id": 11,
+        "name": "Xbox Series X",
+        "category": "Gaming",
+        "price": 499.99,
+        "image": "https://m.media-amazon.com/images/I/515tLyCgdXL._AC_UF1000,1000_QL80_.jpg",
+        "stock": 40
+      },
+      {
+        "id": 12,
+        "name": "GoPro Hero 11",
+        "category": "Cameras",
+        "price": 449.99,
+        "image": "https://gppro.in/wp-content/uploads/2024/11/hero-11-3.jpg",
+        "stock": 20
+      },
+      {
+        "id": 13,
+        "name": "Canon EOS R6",
+        "category": "Cameras",
+        "price": 2499.99,
+        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202007/Canon_EOS_R5.jpeg?size=690:388",
+        "stock": 15
+      },
+      {
+        "id": 14,
+        "name": "Bose QuietComfort 45",
+        "category": "Audio",
+        "price": 329.99,
+        "image": "https://assets.bose.com/content/dam/cloudassets/Bose_DAM/Web/consumer_electronics/global/products/headphones/qc45/product_silo_images/QC45-LE_Right-Angle_1200x1022_Midnight-Blue_RGB.jpg/jcr:content/renditions/cq5dam.web.1920.1920.jpeg",
+        "stock": 50
+      },
+      {
+        "id": 15,
+        "name": "Samsung Galaxy Tab S8",
+        "category": "Tablets",
+        "price": 699.99,
+        "image": "https://www.courtsmammouth.mu/rodrigues/81318-large_default/samsung-galaxy-tab-s8-sm-x706bzsaafa-gray.jpg",
+        "stock": 35
+      },
+      {
+        "id": 16,
+        "name": "Apple iPad Pro 12.9",
+        "category": "Tablets",
+        "price": 1099.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR78ucXFS4HJHuruJDXrGxtxCJHUJsFrqAveui_sth38eyF3CAWJw1A2SfXdIQ5tISQ8U&usqp=CAU",
+        "stock": 40
+      },
+      {
+        "id": 17,
+        "name": "Fitbit Charge 5",
+        "category": "Wearables",
+        "price": 149.99,
+        "image": "https://detec.in/cdn/shop/files/19_b6b94324-74e5-49e9-8b1c-f9a112eb7f02_300x300.jpg?v=1721899864",
+        "stock": 80
+      },
+      {
+        "id": 18,
+        "name": "Apple Watch Series 9",
+        "category": "Wearables",
+        "price": 399.99,
+        "image": "https://m.media-amazon.com/images/I/61T4-3BedZL.jpg",
+        "stock": 45
+      }
+    ]
+  }
+  
