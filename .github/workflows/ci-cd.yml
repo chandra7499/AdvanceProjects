@@ -9,21 +9,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout code
       - uses: actions/checkout@v4
 
-      # 2️⃣ Setup Node
       - uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      # 3️⃣ Docker login (ONCE)
+      # ---------- DOCKER LOGIN ----------
       - name: Docker Login
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login \
           -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-      # ---------- FRONTEND DOCKER IMAGE ----------
+      # ---------- FRONTEND DOCKER ----------
       - name: Build Frontend Docker Image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/frontend:latest ./practices
@@ -32,7 +30,7 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/frontend:latest
 
-      # ---------- BACKEND DOCKER IMAGE ----------
+      # ---------- BACKEND DOCKER ----------
       - name: Build Backend Docker Image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/backend:latest ./server
@@ -41,16 +39,16 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/backend:latest
 
-      # ---------- FIREBASE DEPLOY ----------
+      # ---------- FIREBASE HOSTING ----------
       - name: Install frontend deps
-        working-directory: frontend
+        working-directory: practices
         run: npm install
 
-      - name: Build frontend for Firebase
-        working-directory: frontend
+      - name: Build frontend
+        working-directory: practices
         run: npm run build
 
-      - name: Deploy Frontend to Firebase
+      - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
