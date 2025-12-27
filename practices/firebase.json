@@ -4,7 +4,8 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "(public)",
+    "site": "tanzon-store-6cbb4",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
