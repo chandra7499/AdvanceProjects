@@ -121,7 +121,7 @@ const WishList = () => {
           <div className="flex w-full p-2 gap-2 items-center ">
             <span className="font-semibold">sort:</span>
             <div className="flex gap-3 w-full overflow-auto items-center">
-              {sortList.map((items, index) => (
+              {sortList?.map((items, index) => (
                 <span
                   key={index}
                   className="flex gap-3 bg-gray-200 p-2 *:cursor-pointer rounded-md"
@@ -168,20 +168,20 @@ const WishList = () => {
                   <div className="flex gap-4">
                     <img
                       src={
-                        Array.isArray(item?.image)
-                          ? item?.image[0]
+                        Array.isArray(item?.images)
+                          ? item?.images[0]
                           : item?.image
                       }
-                      className="w-[270px] h-[250px] xs:w-[170px] xs:h-[150px] shadow-xl rounded-lg"
+                      className="w-[270px]  h-[250px] xs:w-[170px] xs:h-[150px] shadow-xl rounded-lg"
                       onClick={() => navigation(item?.id)}
                       alt={item?.name}
                     />
                     <div className="flex flex-col shadow-inner shadow-slate-900 rounded-lg p-2 gap-2">
-                      <h1 className="font-semibold  antialiased">
+                      <h1 className="font-semibold line-clamp-2  antialiased">
                         {item?.name}
                       </h1>
                       <p className="font-mono">₹{generalPrice.toFixed(2)}</p>
-                      <p className="line-clamp-2 font-serif">
+                      <p className="line-clamp-2 font-serif text-sm">
                         {item?.description}
                       </p>
                     </div>
@@ -189,7 +189,7 @@ const WishList = () => {
                   <div className="flex justify-end mb-0 gap-3 mt-auto">
                     <RatingComp
                       size="small"
-                      value={item?.rating}
+                      value={item?.rating.toFixed(1)}
                       color="#053B5AFF"
                     />
                     <AddToCart

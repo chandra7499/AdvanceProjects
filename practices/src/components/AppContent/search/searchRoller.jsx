@@ -54,7 +54,7 @@ const SearchRoller = () => {
                         return (
                             <li key={items.id} onClick={()=>handleSearch(items.name)} className="flex items-center justify-between gap-2 p-2 hover:bg-slate-200 hover:text-slate-950 hover:cursor-pointer"> 
                                <p>{items.name}</p>
-                               <img src={Array.isArray(items.image) ? items.image[0] : items.image} alt={items.name} className="w-10 h-10 rounded-full"/>
+                               <img src={Array.isArray(items.images) ? items.images[0] : items.image} alt={items.name} className="w-10 h-10 rounded-full"/>
                             </li>
                         )
                        })
