@@ -314,6 +314,7 @@ export const PaymentsIdVerifying = async (requestOrderDetails, userId) => {
 
 export const UpdatePaymentDetails = async (
   paymentObj,
+  // RecieptUrl,
   userId,
   section,
   selectedItems
@@ -368,6 +369,7 @@ export const UpdatePaymentDetails = async (
       const newPendingOrder = {
         orderId,
         placeOrderList,
+        // reciept_url: RecieptUrl,
         status: "pending",
         cancelledAt: "",
         deliverdAt: "",
@@ -384,6 +386,7 @@ export const UpdatePaymentDetails = async (
 
       const newPendingOrder = {
         orderId,
+        // reciept_url: RecieptUrl,
         placeOrderList,
         status: "pending",
         cancelledAt: "",

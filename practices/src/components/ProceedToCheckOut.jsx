@@ -17,6 +17,7 @@ const ProceedToCheckOut = ({ selectedItems, section }) => {
     finalPrice,
     addressList,
     offerdetails,
+    cutOffDetails,
     paymentModeLoader,
     setPaymentModeLoader,
     userData,
@@ -95,7 +96,7 @@ const ProceedToCheckOut = ({ selectedItems, section }) => {
     console.log("current final price before Update", finalPrice);
     if (finalPrice > 0) {
       setPaymentModeLoader(true);
-      handlePayments(finalPrice, navigate, setPaymentModeLoader,section,selectedItems);
+      handlePayments(finalPrice, navigate, setPaymentModeLoader,section,selectedItems,cutOffDetails);
     } else {
       setPaymentModeLoader(false);
       console.log("Final price is not updated");

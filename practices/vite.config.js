@@ -7,14 +7,20 @@ export default defineConfig({
     postcss: "./postcss.config.js",
   },
   server: {
+    host: true,
     hmr: {
       overlay: false,
     },
-    historyApiFallback: true, // <-- this fixes refresh issue
+    watch: {
+      usePolling: true,
+    },
   },
   test: {
     globals: true,
     environment: "jsdom",
     setupFiles: "./src/setUptesting.js",
+  },
+  optimizeDeps: {
+    force: true,
   },
 });

@@ -1,10 +1,10 @@
 import { lazy, Suspense, useContext } from "react";
 import { myContext } from "../../components/GlobalStates/contextHooks";
-const HomeContent = lazy(() =>
-  import("../../components/AppContent/AppContent.jsx")
+const HomeContent = lazy(
+  () => import("../../components/AppContent/AppContent.jsx"),
 );
-const PopularCat = lazy(() =>
-  import("../../components/PopularCategories/PopularCat")
+const PopularCat = lazy(
+  () => import("../../components/PopularCategories/PopularCat"),
 );
 import Footer from "../../components/Footer.jsx";
 import { SkeletonLoadingHome } from "../../components/loading";
@@ -14,6 +14,7 @@ import { useTrendingBanners } from "../../api/getItems.js";
 import RecentlyViewed from "../../components/recentlyViewed/RecentlyViewed.jsx";
 import { Main } from "../../components/layouts/layouts";
 import BrandNew from "../../components/recentlyViewed/BrandNew.jsx";
+import BudgetFilter from "../../components/BudgetFilter.jsx";
 const Home = () => {
   const trendingBanners = useTrendingBanners();
   const {
@@ -48,9 +49,10 @@ const Home = () => {
               Popular categories
             </h1>
             {popularCategoryLoading ? (
-            <SkeletonLoadingHome />
+              <SkeletonLoadingHome />
             ) : (
-            <PopularCat products={popularCategories} />)}
+              <PopularCat products={popularCategories} />
+            )}
             <h1 className="flex font-semibold px-5 text-2xl ">Brand New</h1>
             <BrandNew
               wishList={wishList}
@@ -59,9 +61,15 @@ const Home = () => {
             />
           </>
         )}
-        <h1 className="flex font-semibold px-5 text-2xl ">Launching Soon</h1>
-
-        <h1 className="flex font-semibold px-5 text-2xl ">BudGet Gadgets</h1>
+        {/* <h1 className="flex font-semibold px-5 text-2xl ">Launching Soon</h1> */}
+        <section className="flex flex-col gap-2 mt-2">
+          <h1 className="flex font-semibold px-5 text-2xl ">BudGet Gadgets</h1>
+          <BudgetFilter
+            wishList={wishList}
+            userLogin={userLogin}
+            userData={userData}
+          />
+        </section>
 
         <Footer />
       </Main>

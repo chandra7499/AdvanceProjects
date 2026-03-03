@@ -82,7 +82,7 @@ function App() {
 
         <section className="flex-1 w-full mt-[50px] gap-5   md:mt-16 relative ">
           <Login />
-         <ScrollRestoration />
+          <ScrollRestoration />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Category />} />

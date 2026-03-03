@@ -10,7 +10,7 @@ import { NumberAnimation, Loading } from "../loading";
 import AddToCart from "../features/AddToCart";
 import AddToWishList from "../features/AddToWishList";
 import { Button, CircularProgress } from "@mui/material";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, isNumericalString, motion } from "framer-motion";
 const ShareSocallMedia = lazy(() => import("../features/Sharesocially"));
 import SlideOverflow from "../features/SlideOverflow";
 import { selectionProducts, getSimilarProducts } from "../../api/getItems";
@@ -100,7 +100,33 @@ const ProductsView = () => {
       return;
     }
     const match = variants.find((v) => v.color === colorSelected);
-    setSelectedVariant(match || null);
+    if (match) {
+      const processedMatch = { ...match };
+      const numericField = [
+        "price",
+        "mrp",
+        "weight",
+        "length",
+        "width",
+        "height",
+        "storage",
+        "capacity",
+        "stock",
+        "size",
+      ];
+      numericField.forEach((field) => {
+        if (
+          field in processedMatch &&
+          processedMatch[field] !== null &&
+          processedMatch[field] !== undefined
+        ) {
+          const value = processedMatch[field];
+          processedMatch[field] = Number(value);
+        }
+      });
+
+      setSelectedVariant(processedMatch);
+    }
   }, [colorSelected, singleProduct?.variants]);
 
   // Pricing logic based on selected variant
@@ -178,14 +204,17 @@ const ProductsView = () => {
       {
         id: singleProductId,
         name: singleProduct.name,
-        price: basePrice * qty,
+        price: finalPrice * qty,
+        mrp: baseMrp,
         quantity: Number(qty),
-        color: colorSelected,
+        variant: selectedVariant,
+        address: deliveryAddress,
         image: Array.isArray(singleProduct.images)
           ? singleProduct.images[0]
           : singleProduct.images,
       },
     ];
+    console.log(passIngProduct);
     navigate("/delivery-details", {
       state: { products: passIngProduct, section: "singleProduct" },
     });
@@ -556,16 +585,20 @@ const ProductsView = () => {
             >
               {singleProduct?.description}
             </motion.p>
-            <div className={`backdrop-blur-sm rounded-md w-full ${showMore ? "h-1" : "h-8"} flex justify-center absolute bottom-0`}>
+            <div
+              className={`backdrop-blur-sm rounded-md w-full ${
+                showMore ? "h-1" : "h-8"
+              } flex justify-center absolute bottom-0`}
+            >
               <CosButton
                 variant="contained"
                 sx={{
                   backgroundColor: "#0c4a6e",
                   color: "white",
                   fontSize: "0.6rem",
-                  marginTop:"25px"
+                  marginTop: "25px",
                 }}
-                onClick={()=>showMoreDescription()}
+                onClick={() => showMoreDescription()}
                 className="text-indigo-600"
               >
                 {!showMore ? `show more` : "show less"}

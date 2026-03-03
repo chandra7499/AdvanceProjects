@@ -69,7 +69,7 @@ const RecentlyViewed = () => {
                       alt=""
                       className=" w-full ascpect-auto  flex flex-grow object-contain object-center"
                     />
-                    <p className="line-clamp-1">{item?.name}</p>
+                    <p className="line-clamp-1 font-medium antialiased">{item?.name}</p>
                   </div>
                 ))
                 .reverse()}

@@ -1,9 +1,11 @@
 import axios from "axios";
 import {nanoid} from "nanoid";
+import { toast } from "react-toastify";
+
 
 const api_url = import.meta.env.VITE_API_BASE_URL;
 
-export const handlePayments = async (finalPrice,navigate,setPaymentModeLoader,section,selectedItems,) => {
+export const handlePayments = async (finalPrice,navigate,setPaymentModeLoader,section,selectedItems) => {
   console.log("inside", "finalPrice",finalPrice, "section",section, "selectedItems",selectedItems);
   try {
     setPaymentModeLoader?.(true);
@@ -23,6 +25,7 @@ export const handlePayments = async (finalPrice,navigate,setPaymentModeLoader,se
     setPaymentModeLoader?.(false);
     navigate(`/checkout/${order.id}`,{state:{order:order,section:section,selectedItems:selectedItems}});
   } catch (err) {
+    toast.error(err.message);
     console.log("Payment error ", err.message);
   }
 };

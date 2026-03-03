@@ -23,7 +23,7 @@ const PriceSegment = ({ products }) => {
     };
   }, []);
 
-  const { offerdetails, finalPrice, setFinalPrice } = useContext(myContext);
+  const { offerdetails, finalPrice, setFinalPrice ,setCutOffDetails } = useContext(myContext);
 
   useEffect(() => {
     if (!products || (Array.isArray(products) && products.length === 0)) {
@@ -57,6 +57,21 @@ const PriceSegment = ({ products }) => {
       totalPrice + gstAmount + deliveryCharges - discountAmount - promoDiscount;
     setFinalPrice(Number(Math.round(calculatedFinalPrice)));
   }, [offerCode, offerdetails, setFinalPrice, price]);
+
+  useEffect(()=>{
+    const cutOffDetails = {
+      productsdetails:products[0],
+      totalPrice: Number(price),
+      gst: offerdetails[0]?.gst,
+      deliveryCharges: offerdetails[0]?.deliveryCharges,
+      storeDiscount: offerdetails[0]?.storeDiscount,
+      promoDiscount: offerCode === offerdetails[0]?.promoCode[0] ? offerdetails[0]?.promoCode[1] : 0,
+      finalPrice: finalPrice
+    }
+   setCutOffDetails([cutOffDetails]);
+    console.log("priceSegment",cutOffDetails);
+
+  },[finalPrice,offerCode,offerdetails,price,products]);
 
   return (
     <>

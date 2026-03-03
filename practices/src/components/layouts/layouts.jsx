@@ -50,7 +50,7 @@ export const CosButton = ({children,...props})=>{
 export const DiscountTag = ({discount}) => {
   return (
     <>
-      <span className="rounded-lg bg-red-700 ml-2 text-white p-1 text-md scale-[0.6] shadow-xl">{discount}%</span>
+      <span className="rounded-lg bg-red-700 ml-2 w-max text-md font-semibold text-white p-1 text-md scale-[0.6] shadow-xl">{discount}%</span>
     </>
   )
 

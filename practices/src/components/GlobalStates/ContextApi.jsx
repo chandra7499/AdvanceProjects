@@ -53,6 +53,7 @@ const GlobalData = ({ children }) => {
   const [Exchange, setExchange] = useState(false);
   const [uniqueCategories, setUniqueCategories] = useState([]);
   const { products: WishListProducts } = useWishListProducts(userData?.uid);
+  const [cutOffDetails, setCutOffDetails] = useState([]);
   let [wishList, setWishList] = useState([]);
 
   //pending orders
@@ -176,6 +177,8 @@ const GlobalData = ({ children }) => {
           PaymentLoading,
           PaymentError,
           verifyToken,
+          cutOffDetails,
+          setCutOffDetails,
           setSelectedTotalPrice,
           paymentDetails,
           setPaymentDetails,

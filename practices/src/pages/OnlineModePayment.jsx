@@ -1,10 +1,9 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense,useState, useEffect, useContext  } from "react";
 const CheckOutForm = lazy(() => import("../components/Onlinepaymentmode.jsx"));
 import CircularProgress from "@mui/material/CircularProgress";
 import { Button } from "@mui/material";
 import { Outlet, useNavigate, useLocation, useParams } from "react-router-dom";
 import { Main } from "../components/layouts/layouts";
-import { useState, useEffect, useContext } from "react";
 import { myContext } from "../components/GlobalStates/contextHooks.js";
 import { NotFoundAnimation } from "../components/loading";
 import { usePaymentIdVerification } from "../hooks/useItems.js";
@@ -18,7 +17,7 @@ export const PaymentOnlineMode = () => {
   const [Message, setMessage] = useState("");
   const [warningState, setWarningState] = useState(null);
   const { orderId: orderIdParams } = useParams();
-  const { userData } = useContext(myContext);
+  const { userData} = useContext(myContext);
   const orderID = location.state?.order?.id || orderIdParams;
   const status = location.state?.status;
   console.log(status);

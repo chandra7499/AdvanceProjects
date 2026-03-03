@@ -28,6 +28,8 @@ const Deliverydetails = () => {
   const section = location.state?.section;
   console.log(items);
 
+
+
   useEffect(() => {
     const handleChange = () => {
       const promo = getSessionStorage("promoCode");
@@ -60,6 +62,7 @@ const Deliverydetails = () => {
     removeSessionStorage("promoCode");
     window.dispatchEvent(new Event("storage"));
   }
+
 
   return (
     <>

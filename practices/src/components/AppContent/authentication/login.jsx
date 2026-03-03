@@ -261,7 +261,7 @@ export const Login = () => {
                       },
                     }}
                   />
-                  <FacebookIcon
+                  {/* <FacebookIcon
                     data-testid="FacebookIcon"
                     onClick={() => facebookAuth()}
                     sx={{
@@ -273,7 +273,7 @@ export const Login = () => {
                         transition: "all 0.3s ease-in-out",
                       },
                     }}
-                  />
+                  /> */}
                   <GitHubIcon
                     data-testid="GitHubIcon"
                     onClick={() => githubAuth()}
