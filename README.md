@@ -1,314 +1,294 @@
-🛒 Tarzon Store – Full Stack E-commerce Platform
-================================================
 
-Tarzon Store is a **modern full-stack e-commerce web application** built using **React, Node.js, Docker, Firebase, and CI/CD pipelines**.The platform allows users to browse products, manage carts, and securely purchase items while providing scalable backend infrastructure and automated deployment.
+# 🛒 Tarzon Store – Full Stack E-commerce Platform
 
-This project focuses on **scalability, maintainability, and modern DevOps practices**.
+Tarzon Store is a **modern full-stack e-commerce web application** built using **React, Node.js, Docker, Firebase, and CI/CD pipelines**.
 
-🚀 Features
-===========
+The platform allows users to **browse products, manage carts, and securely purchase items** while providing a **scalable backend infrastructure and automated deployment workflow**.
 
-🧑‍💻 User Features
--------------------
+This project focuses on:
 
-*   Browse product catalog
-    
-*   View detailed product information
-    
-*   Add / remove products from cart
-    
-*   Secure checkout process
-    
-*   Responsive UI for mobile and desktop
-    
-*   User authentication and account management
-    
-*   Order management and history
-    
-*   third-party advance payment Integration (RAYZORE-PAY)
-    
+- ⚡ Scalability  
+- 🧩 Maintainability  
+- 🚀 Modern DevOps practices  
 
-🛠 Admin Features
------------------
+---
 
-*   Product management
-    
-*   Inventory control
-    
-*   Order tracking
-    
-*   User management
-    
-*   Dashboard for monitoring store activity
-    
+# 🚀 Features
 
-⚙️ Non-Functional Features
-==========================
+## 👤 User Features
 
-### 🔒 Security
+- Browse product catalog
+- View detailed product information
+- Add / remove products from cart
+- Secure checkout process
+- Responsive UI for mobile and desktop
+- User authentication and account management
+- Order management and history
+- Third-party payment integration (**Razorpay**)
 
-*   Secure authentication
-    
-*   Protected API routes
-    
-*   Environment variable management
-    
+---
 
-### ⚡ Performance
+## 🛠 Admin Features
 
-*   Optimized React rendering
-    
-*   Backend API optimization
-    
-*   Docker containerization for consistent environments
-    
+- Product management
+- Inventory control
+- Order tracking
+- User management
+- Dashboard for monitoring store activity
 
-### 🔄 Scalability
+---
 
-*   Modular backend architecture
-    
-*   Containerized deployment using Docker
-    
-*   CI/CD pipeline for automated builds and deployments
-    
+# ⚙️ Non-Functional Features
 
-### 🧪 Maintainability
+## 🔒 Security
 
-*   Modular component structure
-    
-*   Clean backend service separation
-    
-*   Git-based version control workflow
-    
+- Secure authentication
+- Protected API routes
+- Environment variable management
 
-🏗 Architecture Overview
-========================
+## ⚡ Performance
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   Frontend (React)                |     Backend API (Node.js / Express)                |   Database & Services(Firebase / External services)   `
+- Optimized React rendering
+- Backend API optimization
+- Docker containerization for consistent environments
 
-Deployment & Infrastructure:
+## 🔄 Scalability
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML  `Git Repository              |    vCI/CD Pipeline          |          vDocker Containers            |        vProduction Environment`
+- Modular backend architecture
+- Containerized deployment using Docker
+- CI/CD pipeline for automated builds and deployments
 
-🧰 Tech Stack
-=============
+## 🧪 Maintainability
 
-### Frontend
+- Modular component structure
+- Clean backend service separation
+- Git-based version control workflow
 
-*   React
-    
-*   JavaScript
-    
-*   HTML5
-    
-*   CSS3
-    
+---
 
-### Backend
+# 🏗 Architecture Overview
+   Frontend (React)
+        │
+        ▼
+  Backend API (Node.js / Express)
+        │
+        ▼
+Database & Services (Firebase / External APIs) 
 
-*   Node.js
-    
-*   Express.js
-    
 
-### DevOps
+### Deployment Flow
+  Git Repository
+       │
+       ▼
+  CI/CD Pipeline
+       │
+       ▼
+ Docker Containers
+       │
+       ▼
+Production Environment
 
-*   Docker
-    
-*   CI/CD Pipeline
-    
-*   Git & GitHub
-    
 
-### Services
+---
 
-*   Firebase
-    
+# 🧰 Tech Stack
 
-📦 Project Structure
-====================
+## Frontend
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   tarzon-store│           ├── client│                   ├── src│                       ├── components│                        ├── pages│                        └── services│          ├── server│                 ├── controllers│                ├── routes│                  ├── models│                 └── middleware│               ├── docker│  ├── .github/workflows│  ├── Dockerfile       ├── docker-compose.yml  └── README.md   `
+- React
+- JavaScript
+- HTML5
+- CSS3
 
-⚡ Getting Started
-=================
+## Backend
 
-Prerequisites
--------------
+- Node.js
+- Express.js
+
+## DevOps
+
+- Docker
+- GitHub Actions (CI/CD)
+- Git & GitHub
+
+## Services
+
+- Firebase
+- Razorpay Payment Gateway
+
+---
+
+# 📦 Project Structure
+
+tarzon-store
+│
+├── client
+│   └── src
+│       ├── components
+│       ├── pages
+│       └── services
+│
+├── server
+│   ├── controllers
+│   ├── routes
+│   ├── models
+│   └── middleware
+│
+├── docker
+│
+├── .github/workflows
+│
+├── Dockerfile
+├── docker-compose.yml
+└── README.md
+
+
+---
+
+# ⚡ Getting Started
+
+## Prerequisites
 
 Make sure you have installed:
 
-*   Node.js
-    
-*   npm or yarn
-    
-*   Docker
-    
-*   Git
-    
+- Node.js
+- npm or yarn
+- Docker
+- Git
 
-🔧 Installation
-===============
+---
 
-1️⃣ Clone the repository
-------------------------
+# 🔧 Installation
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   [git clone https://github.com/your-username/tarzon-store.git](https://github.com/chandra7499/AdvanceProjects.git)   `
+## 1️⃣ Clone the Repository
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   cd practices   `
+```bash
+git clone https://github.com/chandra7499/AdvanceProjects.git
 
-2️⃣ Install dependencies
-------------------------
+cd practices
 
-### Client
+Install Dependencies
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   cd clientnpm install   `
+cd client
+npm install
 
-### Server
+Server
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   cd servernpm install   `
+cd server
+npm install
+
 
 🔑 Environment Variables
-========================
 
-Create a .env file in the server directory.
+Create a .env file inside the server directory.
 
-Example:
+PORT=5000
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   PORT=5000  FIREBASE_API_KEY=your_key  FIREBASE_AUTH_DOMAIN=your_domain  FIREBASE_PROJECT_ID=your_project   `
+FIREBASE_API_KEY=your_key
+FIREBASE_AUTH_DOMAIN=your_domain
+FIREBASE_PROJECT_ID=your_project
 
-▶️ Running the Application
-==========================
+ ▶️ Running the Application
 
 Start Backend
--------------
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   cd servernpm start   `
+  cd server
+  npm run server
 
 Start Frontend
---------------
+cd client
+npm run dev
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   cd clientnpm start   `
-
-Application will run on:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   Frontend → http://localhost:3000  Backend → http://localhost:5000   `
+Application runs on:
+  Frontend → http://localhost:5173
+  Backend  → http://localhost:3000
 
 🐳 Running with Docker
-======================
 
-Build the Docker containers:
+Build Containers
+  docker-compose up --build
+Run Containers
+  docker-compose up
+Stop Containers
+  docker-compose down
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   docker-compose up --build   `
-
-Run containers:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   docker-compose up   `
-
-Stop containers:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   docker-compose down   `
-
-Docker ensures the application runs consistently across different environments.
 
 🔄 CI/CD Pipeline
-=================
 
 The project includes automated pipelines that:
 
-*   Run tests
-    
-*   Build Docker images
-    
-*   Validate code quality
-    
-*   Deploy the application
-    
+Run tests
 
-CI/CD ensures:
+Build Docker images
 
-*   Faster development cycles
-    
-*   Automated builds
-    
-*   Reliable deployments
-    
+Validate code quality
+
+Deploy the application
+
+Benefits:
+
+Faster development cycles
+
+Automated builds
+
+Reliable deployments
+
 
 🤝 Contributing
-===============
 
-Contributions are welcome! Follow these steps to contribute.
+Contributions are welcome!
 
 1️⃣ Fork the repository
------------------------
 
-Click **Fork** on GitHub.
+Click Fork on GitHub.
 
 2️⃣ Clone your fork
--------------------
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   [git clone https://github.com/your-username/tarzon-store.git](https://github.com/chandra7499/AdvanceProjects.git)   `
-
+git clone https://github.com/your-username/tarzon-store.git
 3️⃣ Create a new branch
------------------------
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   git checkout -b feature/your-feature-name   `
-
+git checkout -b feature/your-feature-name
 4️⃣ Make your changes
----------------------
 
 Ensure your code follows project standards.
 
-5️⃣ Commit your changes
------------------------
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   git commit -m "Add new feature"   `
-
+5️⃣ Commit changes
+git commit -m "Add new feature"
 6️⃣ Push to your fork
----------------------
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   git push origin feature/your-feature-name   `
-
+git push origin feature/your-feature-name
 7️⃣ Open a Pull Request
------------------------
 
-Submit a PR describing:
+Describe:
 
-*   What changes you made
-    
-*   Why they are needed
-    
-*   Any testing performed
-    
+What changes you made
+
+Why they are needed
+
+Any testing performed
 
 📌 Contribution Guidelines
-==========================
 
 Before submitting a PR:
 
-*   Follow project folder structure
-    
-*   Write clean and readable code
-    
-*   Test your changes locally
-    
-*   Ensure the application builds successfully
-    
+Follow project folder structure
+
+Write clean and readable code
+
+Test your changes locally
+
+Ensure the application builds successfully
 
 🧪 Future Improvements
-======================
 
-*   Recommendation system
-    
-*   Microservices architecture
-    
+Recommendation system
+
+Microservices architecture
+
+Advanced analytics dashboard
+
+AI-based product recommendations
 
 📄 License
-==========
 
 This project is licensed under the MIT License.
 
 👨‍💻 Author
-============
 
-Developed by the **Tarzon Store Development Team**
+Developed by the Tarzon Store Development Team
