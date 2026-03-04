@@ -68,7 +68,7 @@ route.post("/purchases-bill", async (req, res) => {
 
     return res
       .status(200)
-      .json({ success: true, pdfUrl: resutl_url.public_id });
+      .json({ success: true, pdfUrl: resutl_url.public_id, message: "order places successfully and reciept generated successfully"});
   } catch (error) {
     console.log(error.message);
   }

@@ -4,11 +4,15 @@ services:
   frontend:
     build: ../practices/practices
     ports:
-      - "3000:4173"
-    depends_on: 
-      - backend
+      - "3000:5173"
+    volumes:
+      - ../practices/practices:/app
+      - frontend_node_modules:/app/node_modules 
+    command: npm run dev -- --host
     environment:
       - VITE_API_BASE_URL=http://localhost:5002
+    depends_on:
+      - backend
     networks:
       - app-network
 
@@ -16,7 +20,11 @@ services:
     build: ./server
     ports:
       - "5002:5002"
-    environment: 
+    volumes:
+      - ./server:/app
+      - backend_node_modules:/app/node_modules    
+    command: npm run server
+    environment:
       - NODE_ENV=development
       - PORT=5002
       - CORS_ORIGIN=http://localhost:3000
@@ -26,3 +34,7 @@ services:
 networks:
   app-network:
     driver: bridge
+
+volumes:
+  frontend_node_modules:
+  backend_node_modules:
